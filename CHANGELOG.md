@@ -1,6 +1,80 @@
 # Change Log
 
 
+## [5.27.0](https://github.com/t27duck/honeybadger-ruby/compare/v5.26.1...v5.27.0) (2025-01-04)
+
+
+### Features
+
+* add --host and --ui_host flags to install command ([#584](https://github.com/t27duck/honeybadger-ruby/issues/584)) ([5f171ba](https://github.com/t27duck/honeybadger-ruby/commit/5f171badc0602df76a87e4caa0e06c9959648376))
+* add --insights flag to install command ([#564](https://github.com/t27duck/honeybadger-ruby/issues/564)) ([02a41c6](https://github.com/t27duck/honeybadger-ruby/commit/02a41c67e4b33012057e4ae4c2bd23ca8c13c99b))
+* add a separate configuration for Insights in a console ([#623](https://github.com/t27duck/honeybadger-ruby/issues/623)) ([a89488e](https://github.com/t27duck/honeybadger-ruby/commit/a89488e535ff04ec2e362807f0001471ba5c6fe3))
+* add ability to link to a custom domain after creating a notice ([#583](https://github.com/t27duck/honeybadger-ruby/issues/583)) ([5b32b23](https://github.com/t27duck/honeybadger-ruby/commit/5b32b231bb5562b3d97066e3a41f39de76b2f4a3))
+* add additional context to ActiveJob notifications ([#528](https://github.com/t27duck/honeybadger-ruby/issues/528)) ([d6ae246](https://github.com/t27duck/honeybadger-ruby/commit/d6ae246a24290d76bcd0c8deb9121707d88976fe))
+* add aggregated metrics for rails and more ([#630](https://github.com/t27duck/honeybadger-ruby/issues/630)) ([12db5a4](https://github.com/t27duck/honeybadger-ruby/commit/12db5a4d44a9597c0999d32a150283799d856d66))
+* add before_event hook for intercepting events ([#567](https://github.com/t27duck/honeybadger-ruby/issues/567)) ([2f86728](https://github.com/t27duck/honeybadger-ruby/commit/2f8672814af3b12b3bfbc775de63b7a34b5087ad))
+* add event stats for sidekiq and sq ([#638](https://github.com/t27duck/honeybadger-ruby/issues/638)) ([0d15bf5](https://github.com/t27duck/honeybadger-ruby/commit/0d15bf543d4c425a2d9f6000d328dc0e71261647))
+* add insights instrumentation - events and metrics ([#539](https://github.com/t27duck/honeybadger-ruby/issues/539)) ([d173ac5](https://github.com/t27duck/honeybadger-ruby/commit/d173ac53b45be6b9036c292d8efc5002d8b354b1))
+* add karafka processing_lag to event ([#613](https://github.com/t27duck/honeybadger-ruby/issues/613)) ([a527eea](https://github.com/t27duck/honeybadger-ruby/commit/a527eea37eb3d351dd6731ea3c469dcb2609fea6))
+* add request_id to notices ([#619](https://github.com/t27duck/honeybadger-ruby/issues/619)) ([fa4d878](https://github.com/t27duck/honeybadger-ruby/commit/fa4d878ad0f0a5c37e49adeab1c53e6ffa463295)), closes [#616](https://github.com/t27duck/honeybadger-ruby/issues/616)
+* Decrease time spent bundle installing in GH Actions ([#392](https://github.com/t27duck/honeybadger-ruby/issues/392)) ([56f998b](https://github.com/t27duck/honeybadger-ruby/commit/56f998bdf44703329cbdc5b69c7ca4d458f6c9b5))
+* define default events to ignore, allow for override ([#570](https://github.com/t27duck/honeybadger-ruby/issues/570)) ([a6f2177](https://github.com/t27duck/honeybadger-ruby/commit/a6f2177eb69b75eafef235768187ccf6b3a538f0))
+* disable all workers in rails console ([#636](https://github.com/t27duck/honeybadger-ruby/issues/636)) ([d0bcb42](https://github.com/t27duck/honeybadger-ruby/commit/d0bcb4278ad84d02e3706766269582067bc76e29))
+* dummy commit to trigger minor version bump ([11ef01c](https://github.com/t27duck/honeybadger-ruby/commit/11ef01c4bfa4bcf02d6cc37e02fa017dd71342af))
+* emit an event for karafka stats ([#637](https://github.com/t27duck/honeybadger-ruby/issues/637)) ([e7e74b5](https://github.com/t27duck/honeybadger-ruby/commit/e7e74b51324f7c718b1adc634cee4233d0c91813))
+* implement local contexts ([#541](https://github.com/t27duck/honeybadger-ruby/issues/541)) ([806718e](https://github.com/t27duck/honeybadger-ruby/commit/806718e76bf8d132a632c75bea124a8b22a4cc97))
+* implements honeybadger.event by synchronous log call ([#512](https://github.com/t27duck/honeybadger-ruby/issues/512)) ([dbe7e3d](https://github.com/t27duck/honeybadger-ruby/commit/dbe7e3dc20cbb432254b055b356826a42a76c609))
+* improved karafka plugin for insights ([#625](https://github.com/t27duck/honeybadger-ruby/issues/625)) ([21880fc](https://github.com/t27duck/honeybadger-ruby/commit/21880fc92493abb044ba3c0d64299ad8b92ad5f3))
+* initialize Honeybadger before other Rails initializers ([#439](https://github.com/t27duck/honeybadger-ruby/issues/439)) ([348ac04](https://github.com/t27duck/honeybadger-ruby/commit/348ac048d33f82a92df170548b0b4173d2b006f5))
+* only allow for insights to be enabled when public ([#642](https://github.com/t27duck/honeybadger-ruby/issues/642)) ([2d3ab26](https://github.com/t27duck/honeybadger-ruby/commit/2d3ab26ca3673b5b01082d55737bf7907c02e799))
+* return block value if block was passed to Honeybadger.context ([#546](https://github.com/t27duck/honeybadger-ruby/issues/546)) ([2d7c685](https://github.com/t27duck/honeybadger-ruby/commit/2d7c68565a5b9013fbbad6da16a706f38a3306b0))
+* set context during rails error report ([#649](https://github.com/t27duck/honeybadger-ruby/issues/649)) ([dee37e1](https://github.com/t27duck/honeybadger-ruby/commit/dee37e157b0913e24a5d368e3d2cbe733f87214e))
+* skip middleware, plugins, and exception reporting when exceptions are disabled ([#646](https://github.com/t27duck/honeybadger-ruby/issues/646)) ([6c4d7d5](https://github.com/t27duck/honeybadger-ruby/commit/6c4d7d53f7356717894269b5fc9095621c9e8014))
+* support Rails 7 error reporting interface ([#443](https://github.com/t27duck/honeybadger-ruby/issues/443)) ([7f2f658](https://github.com/t27duck/honeybadger-ruby/commit/7f2f658651d55eb5ea6ec2ef7b62be532e23bf7c))
+* track exceptions in :async activejob adapter ([#503](https://github.com/t27duck/honeybadger-ruby/issues/503)) ([9a6e2ec](https://github.com/t27duck/honeybadger-ruby/commit/9a6e2ec795c7f61e83f624d81db87df3802e370c))
+* track exceptions in :solid_queue ([#526](https://github.com/t27duck/honeybadger-ruby/issues/526)) ([4e2d428](https://github.com/t27duck/honeybadger-ruby/commit/4e2d4287bbbe0100d6f82a38b7314fc8dc5a1571)), closes [#518](https://github.com/t27duck/honeybadger-ruby/issues/518)
+* update puma and autotuner plugins ([#644](https://github.com/t27duck/honeybadger-ruby/issues/644)) ([1ed9687](https://github.com/t27duck/honeybadger-ruby/commit/1ed96874c31c0273bc28cb917043f19140fd8204))
+* use after_change for context changes ([#651](https://github.com/t27duck/honeybadger-ruby/issues/651)) ([2cfc766](https://github.com/t27duck/honeybadger-ruby/commit/2cfc766660d0462168aded9c34712904f8a1f774))
+
+
+### Bug Fixes
+
+* access GoodJob config via Rails.application.config ([#554](https://github.com/t27duck/honeybadger-ruby/issues/554)) ([37b7786](https://github.com/t27duck/honeybadger-ruby/commit/37b7786e9fefdaa23ccd45ca55a0573b0a832f58))
+* add []= delegator ([#590](https://github.com/t27duck/honeybadger-ruby/issues/590)) ([9f1d6b5](https://github.com/t27duck/honeybadger-ruby/commit/9f1d6b55e88497c4c37659fdfaeaa163c7794672))
+* add back key for cache notification payloads ([#600](https://github.com/t27duck/honeybadger-ruby/issues/600)) ([9779dd4](https://github.com/t27duck/honeybadger-ruby/commit/9779dd4664a057bdb65a9144612f29c569ac4da5))
+* add event method for cli backend test ([#588](https://github.com/t27duck/honeybadger-ruby/issues/588)) ([1e047bb](https://github.com/t27duck/honeybadger-ruby/commit/1e047bbcd17db676b96dd78eb918475e3a52ab1b))
+* buffer more and warn less ([#575](https://github.com/t27duck/honeybadger-ruby/issues/575)) ([8e99e17](https://github.com/t27duck/honeybadger-ruby/commit/8e99e17af65e8d0002e5e8204d5ded1cea891e86))
+* cache misses? possible speed improvement ([#388](https://github.com/t27duck/honeybadger-ruby/issues/388)) ([3c8c4ff](https://github.com/t27duck/honeybadger-ruby/commit/3c8c4ff191ba39ca77305d129b004826a08bb919))
+* cli test for rails 8 ([#639](https://github.com/t27duck/honeybadger-ruby/issues/639)) ([ec74cfd](https://github.com/t27duck/honeybadger-ruby/commit/ec74cfd95519cd49509ff63fb34a7673f5c76323))
+* disable insights when loading rails console ([#580](https://github.com/t27duck/honeybadger-ruby/issues/580)) ([94844bd](https://github.com/t27duck/honeybadger-ruby/commit/94844bd72922f27ecf40453ef7c901433067688b))
+* do GoodJob.on_thread_error check via hash instead of method ([#558](https://github.com/t27duck/honeybadger-ruby/issues/558)) ([d2aa464](https://github.com/t27duck/honeybadger-ruby/commit/d2aa4640e371e3985310fb30ad5a356807d2bab3))
+* do not check for rails console ([#574](https://github.com/t27duck/honeybadger-ruby/issues/574)) ([ba74af8](https://github.com/t27duck/honeybadger-ruby/commit/ba74af8b55393ea0a96962085ea48c4376380be3))
+* do not serialize adapter object ([#586](https://github.com/t27duck/honeybadger-ruby/issues/586)) ([f724ebf](https://github.com/t27duck/honeybadger-ruby/commit/f724ebf0a2c3e2402c64448779cf7e6386de8b47))
+* don't blow up if ActiveJob queue_adapter isn't a string or symbol ([#561](https://github.com/t27duck/honeybadger-ruby/issues/561)) ([4550ea3](https://github.com/t27duck/honeybadger-ruby/commit/4550ea393680a07599deb95f6b49e45112447efa)), closes [#560](https://github.com/t27duck/honeybadger-ruby/issues/560)
+* don't duplicate the error handling done by GoodJob ([#551](https://github.com/t27duck/honeybadger-ruby/issues/551)) ([a0bab0d](https://github.com/t27duck/honeybadger-ruby/commit/a0bab0de01c9782948ff6dd38c88434e71bdfa3d)), closes [#537](https://github.com/t27duck/honeybadger-ruby/issues/537)
+* don't raise an exception when ActiveJob isn't loaded ([#523](https://github.com/t27duck/honeybadger-ruby/issues/523)) ([40c7892](https://github.com/t27duck/honeybadger-ruby/commit/40c7892b9f191eb9159b776880962fc079c5e665))
+* don't raise errors in instrumentation metrics ([#627](https://github.com/t27duck/honeybadger-ruby/issues/627)) ([1231dae](https://github.com/t27duck/honeybadger-ruby/commit/1231dae0c48a2fab4cdaa14f7308ab3e0b44c287))
+* don't run middleware in Sinatra when not configured ([#629](https://github.com/t27duck/honeybadger-ruby/issues/629)) ([d84c2b1](https://github.com/t27duck/honeybadger-ruby/commit/d84c2b15f61b1a019be6329981d8f5323115d1e9))
+* don't send "key" in cache event payloads ([#596](https://github.com/t27duck/honeybadger-ruby/issues/596)) ([b05ba2d](https://github.com/t27duck/honeybadger-ruby/commit/b05ba2da4c76f31bf4f51761542fa0211148ace5))
+* ignore content-less SQL statements ([#572](https://github.com/t27duck/honeybadger-ruby/issues/572)) ([e7ecd36](https://github.com/t27duck/honeybadger-ruby/commit/e7ecd36969922496e276a246406fe7d792de00e3))
+* ignore vendor/bundle when creating gem ([#515](https://github.com/t27duck/honeybadger-ruby/issues/515)) ([a38658f](https://github.com/t27duck/honeybadger-ruby/commit/a38658f84f5ecc062fce7b606311107483f7af96)), closes [#514](https://github.com/t27duck/honeybadger-ruby/issues/514)
+* init karafka plugin only if monitor is available ([#606](https://github.com/t27duck/honeybadger-ruby/issues/606)) ([cb0f89c](https://github.com/t27duck/honeybadger-ruby/commit/cb0f89cddd7f8ad4b977a3b8665d0d12a59300d1))
+* Make notify work with proper ruby keyword arguments ([#498](https://github.com/t27duck/honeybadger-ruby/issues/498)) ([e4a006c](https://github.com/t27duck/honeybadger-ruby/commit/e4a006cfb2a2ecbab2f742b6e9f9c8e9b8958430))
+* pin rspec-its gem to 1.3.1 ([#631](https://github.com/t27duck/honeybadger-ruby/issues/631)) ([5f78b8a](https://github.com/t27duck/honeybadger-ruby/commit/5f78b8adfb1b86c233bf9ad3ddb69dc702341e11))
+* safe navigate adapter_name for payload connection ([#593](https://github.com/t27duck/honeybadger-ruby/issues/593)) ([368fb16](https://github.com/t27duck/honeybadger-ruby/commit/368fb160d811252f83d0e262110a8c198557c7df))
+* sanitize event payload data ([#602](https://github.com/t27duck/honeybadger-ruby/issues/602)) ([f307212](https://github.com/t27duck/honeybadger-ruby/commit/f307212cf9a3df43b8bacff1474c2f674ff3f1a3))
+* sanitize SQL when reporting SQL queries ([#571](https://github.com/t27duck/honeybadger-ruby/issues/571)) ([40d4a79](https://github.com/t27duck/honeybadger-ruby/commit/40d4a79a5c1f758fe49779e63697d56599537235))
+* sidekiq leader check only for version &gt; 6.5 ([#594](https://github.com/t27duck/honeybadger-ruby/issues/594)) ([3bc005b](https://github.com/t27duck/honeybadger-ruby/commit/3bc005b12d689da84ebe9b485eb53c508623d984))
+* squash warning about BigDecimal ([#578](https://github.com/t27duck/honeybadger-ruby/issues/578)) ([47ff813](https://github.com/t27duck/honeybadger-ruby/commit/47ff8130047b723b9d85be07b308c4883320eabb))
+* store pr title before usage ([#542](https://github.com/t27duck/honeybadger-ruby/issues/542)) ([d4cdfe7](https://github.com/t27duck/honeybadger-ruby/commit/d4cdfe71d6a957be8c61bcb5c01f96b0735b5c97))
+* support Ruby 3.4 quote syntax in backtraces ([1655a04](https://github.com/t27duck/honeybadger-ruby/commit/1655a041d707be1dcd8dd30314cc2383af084d8f))
+* use top level Sidekiq namespace ([#598](https://github.com/t27duck/honeybadger-ruby/issues/598)) ([8b95d19](https://github.com/t27duck/honeybadger-ruby/commit/8b95d1910abbb015d17c132c1737acbf1fbd7c7f))
+
+
+### Performance Improvements
+
+* don't insert middleware at all if they've been disabled ([#549](https://github.com/t27duck/honeybadger-ruby/issues/549)) ([0060dcf](https://github.com/t27duck/honeybadger-ruby/commit/0060dcf1a928c7048d7440bdf39da37cccaf057d))
+
 ## [5.26.1](https://github.com/honeybadger-io/honeybadger-ruby/compare/v5.26.0...v5.26.1) (2024-12-17)
 
 
